@@ -1,27 +1,26 @@
 <!doctype html>
 <!--
-  Elite - privacy policy (REL-003, the last store publication blocker).
+  Elite - privacy policy (REL-003).
 
-  SOURCE OF TRUTH lives here (app repo, docs/release/). The hosted copy lives in the
-  separate public repo `elite-account-deletion` as privacy.html, deployed on Vercel.
-  Edit HERE first, then copy over and push - same contract as the deletion page
-  (see that repo's README).
+  THIS FILE IS THE SOURCE OF TRUTH (relocated from the app repo 2026-08-15 on the
+  founder's instruction - the app repo carries NO copy). Edit it here, push, and
+  Vercel redeploys. The Elite app repo's CLAUDE.md carries the standing rule that
+  binds them: any app change that alters what data is collected, shared, stored,
+  or which permissions ship MUST update this page in the same session.
 
   Paste the hosted URL into:
     - Play Console -> App content -> Privacy policy
     - App Store Connect -> App Privacy -> Privacy Policy URL
 
-  Every factual claim below is grounded in the spec-011 audit:
+  Every factual claim below is grounded in the app repo's spec-011 audit:
   docs/qa/011-release-readiness/data-flows.md (FR-014 data inventory, FR-016 telemetry,
   FR-017 declarations) and artifact-inspection.md (FR-004 permissions).
   The AI Day Review feature (FR-015 Gemini) was PAUSED ENTIRELY on 2026-08-15 -
   client gated + server stubbed - so the policy no longer describes it. If AI ever
   resumes, restore the disclosure section BEFORE re-enabling (see git history).
 
-  Self-contained: the brand mark is embedded, no external requests, no scripts.
-  The img src holds a placeholder token that tool/inject_mark.mjs replaces with the
-  embedded PNG data URI at copy time (read from account-deletion-page.html), so this
-  tracked source stays diffable instead of carrying a second half-megabyte base64 blob.
+  Self-contained: the brand mark is embedded (the long img src line), no external
+  requests, no scripts. Edit copy in the sections below; leave the img line alone.
 -->
 <html lang="en">
 <head>

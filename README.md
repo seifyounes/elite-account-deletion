@@ -12,12 +12,13 @@ no scripts), deployed on Vercel:
   App content → Privacy policy AND App Store Connect → App Privacy → Privacy
   Policy URL.
 
-Source of truth for both lives in the private app repo under
-`Elite app/docs/release/`:
+## Edit contract
 
-- `account-deletion-page.html` → copy here as `index.html`.
-- `privacy-policy.html` → generated here as `privacy.html` via
-  `node tool/inject_mark.mjs` (the tracked source keeps a placeholder for the
-  embedded brand mark; the tool injects the real data URI at copy time).
-
-Edit there, copy/generate here, push — Vercel redeploys.
+- `privacy.html` — **this repo is the source of truth** (relocated from the app
+  repo 2026-08-15; the app repo carries no copy). Edit here, push, Vercel
+  redeploys. The Elite app repo's `CLAUDE.md` carries the standing rule that
+  keeps it current: any app change that alters what data is collected, shared,
+  stored, or which permissions ship must update this page in the same session.
+- `index.html` — source of truth is
+  `Elite app/docs/release/account-deletion-page.html` in the private app repo:
+  edit there, copy here, push.
