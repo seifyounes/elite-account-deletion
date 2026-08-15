@@ -12,8 +12,11 @@
     - App Store Connect -> App Privacy -> Privacy Policy URL
 
   Every factual claim below is grounded in the spec-011 audit:
-  docs/qa/011-release-readiness/data-flows.md (FR-014 data inventory, FR-015 Gemini,
-  FR-016 telemetry, FR-017 declarations) and artifact-inspection.md (FR-004 permissions).
+  docs/qa/011-release-readiness/data-flows.md (FR-014 data inventory, FR-016 telemetry,
+  FR-017 declarations) and artifact-inspection.md (FR-004 permissions).
+  The AI Day Review feature (FR-015 Gemini) was PAUSED ENTIRELY on 2026-08-15 -
+  client gated + server stubbed - so the policy no longer describes it. If AI ever
+  resumes, restore the disclosure section BEFORE re-enabling (see git history).
 
   Self-contained: the brand mark is embedded, no external requests, no scripts.
   The img src holds a placeholder token that tool/inject_mark.mjs replaces with the
@@ -102,7 +105,6 @@
       <li>A small, fixed set of app-interaction events with numeric properties (for example
         load and strength values, and the app version), linked to your account ID. These
         events never include your custom habit names or any free-text you write.</li>
-      <li>A per-day count of AI requests, used for rate limiting.</li>
     </ul>
   </section>
 
@@ -122,30 +124,13 @@
   </section>
 
   <section>
-    <h2>AI Day Review - what is shared with Google</h2>
-    <p>Elite has an optional AI feature that writes a custom line about your day.
-      <strong>It is off by default.</strong> Nothing in this section happens unless you
-      turn it on in Settings.</p>
-    <p>When AI is on and your day is reviewed, we send the following to Google's Gemini
-      service to generate the text: your display name, your ten WHYs word-for-word, the
-      names of the habits you missed that day, and your chosen tone. Google processes that
-      content and returns the generated line. We cache the generated lines in our database
-      so the same day is not re-sent.</p>
-    <p>Your WHYs are the most personal thing in Elite - that is exactly why the AI quotes
-      them back at you, and why we tell you plainly that turning AI on shares them with
-      Google. Turn the feature off in Settings at any time; when it is off, nothing is
-      sent to Google.</p>
-  </section>
-
-  <section>
     <h2>Who we share data with</h2>
     <p>We do not sell your data. We do not share it with advertisers. We share it only
       with the service providers that run Elite:</p>
     <ul>
       <li><strong>Supabase</strong> - our database, authentication, and backend hosting.
         Your data is stored on servers in London, United Kingdom.</li>
-      <li><strong>Google</strong> - Gemini, only when you enable AI (see above), and
-        Google sign-in if you choose it.</li>
+      <li><strong>Google</strong> - Google sign-in, if you choose it.</li>
       <li><strong>Apple</strong> - Sign in with Apple if you choose it, and App Store billing.</li>
       <li><strong>RevenueCat</strong> - subscription management. It receives an app user ID
         and purchase information from the store, never your payment details.</li>
@@ -162,6 +147,7 @@
       <li>No selling or renting of your data - to anyone, ever.</li>
       <li>No access to your location, contacts, photos, camera, or microphone. The app
         does not request those permissions.</li>
+      <li>No AI. Your content is not sent to any AI service.</li>
       <li>Reminders are generated on your device. Your habit data is not sent to any
         push-notification service.</li>
     </ul>
@@ -170,8 +156,7 @@
   <section>
     <h2>Storage and security</h2>
     <p>All data travels encrypted (TLS). In the database, per-account access rules ensure
-      your rows are readable only by your own signed-in account. AI keys live on our
-      servers, never in the app.</p>
+      your rows are readable only by your own signed-in account.</p>
     <p class="muted">No system is perfectly secure, and we cannot guarantee absolute
       security - but Elite is built so that the most personal data stays under your
       account and nothing leaves without a reason listed on this page.</p>
@@ -202,7 +187,6 @@
     <ul>
       <li>Almost everything Elite stores is visible and editable directly in the app -
         your profile, habits, WHYs, plans, memories, and moods.</li>
-      <li>The AI feature is opt-in and can be turned off at any time in Settings.</li>
       <li>Notifications are controlled in the app and in your device settings.</li>
       <li>You can delete your account and all its data at any time, as described above.</li>
     </ul>
