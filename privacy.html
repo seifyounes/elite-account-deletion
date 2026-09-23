@@ -100,7 +100,7 @@
     </ul>
     <h3>Purchases</h3>
     <ul>
-      <li>Subscription status (product, active period) via RevenueCat.
+      <li>Subscription status (product, active period) via our subscription provider.
         <span class="muted">We never receive your card or payment details - payment is
         processed entirely by the App Store or Google Play.</span></li>
     </ul>
@@ -109,7 +109,7 @@
       <li>A small, fixed set of app-interaction events with numeric properties (for example
         load and strength values, and the app version), linked to your account ID. These
         events never include your custom habit names or any free-text you write.</li>
-      <li>A push-notification device token, issued by Firebase Cloud Messaging, for each phone
+      <li>A push-notification device token, issued by Google's push service, for each phone
         you are signed in on. It exists only to deliver Recovery alerts - a short, generic
         message when a strong run of yours starts to fade - and carries none of your habit
         data. It is removed when you sign out of that phone and deleted with your account.
@@ -148,15 +148,18 @@
     <p>We do not sell your data. We do not share it with advertisers. We share it only
       with the service providers that run Elite:</p>
     <ul>
-      <li><strong>Supabase</strong> - our database, authentication, and backend hosting.
-        Your data is stored on servers in London, United Kingdom.</li>
-      <li><strong>Google</strong> - Google sign-in, if you choose it; and Firebase Cloud
-        Messaging, which delivers Recovery alerts to your phone. It receives your device's push
+      <li><strong>Our cloud platform</strong> - the database, sign-in and hosting that run
+        Elite. Your data is stored on servers in London, United Kingdom.</li>
+      <li><strong>Google</strong> - Google sign-in, if you choose it; and Google's push
+        service, which delivers Recovery alerts to your phone. It receives your device's push
         token and the generic alert text - never your habits or anything you write.</li>
       <li><strong>Apple</strong> - Sign in with Apple if you choose it, and App Store billing.</li>
-      <li><strong>RevenueCat</strong> - subscription management. It receives an app user ID
-        and purchase information from the store, never your payment details.</li>
+      <li><strong>Our subscription provider</strong> - it receives an app user ID and purchase
+        information from the store, never your payment details.</li>
     </ul>
+    <p class="muted">We describe these providers by the job they do rather than by name. If you
+      want to know exactly which companies hold your data, email seifyounes222@gmail.com and we
+      will tell you.</p>
     <p>We may disclose data if required by law, or to protect Elite's rights, safety, or
       users. If Elite is ever acquired or merged, your data may transfer to the new owner
       under this same policy.</p>
