@@ -5,10 +5,6 @@
       "has": [{ "type": "host", "value": "privacy-policy.eliteapp.net" }],
       "destination": "/privacy.html"
     },
-    {
-      "source": "/",
-      "has": [{ "type": "host", "value": "delete-account.eliteapp.net" }],
-      "destination": "/index.html"
-    }
+    { "source": "/", "destination": "/delete-account.html" }
   ]
 }

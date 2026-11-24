@@ -5,8 +5,8 @@ testing and not in the app stores yet.
 
 Two static pages with no scripts and no outside requests, served by Vercel:
 
-- [`index.html`](https://delete-account.eliteapp.net): how to delete your Elite account and data.
+- [`delete-account.html`](https://delete-account.eliteapp.net): how to delete your Elite account and data.
 - [`privacy.html`](https://privacy-policy.eliteapp.net): what the app collects, why, and who
   processes it.
 
-`privacy.html` is edited here. `index.html` is copied from the private app repo, so change it there first.
+`privacy.html` is edited here. `delete-account.html` is copied from the private app repo, so change it there first.
